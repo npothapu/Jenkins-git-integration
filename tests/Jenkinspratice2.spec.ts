@@ -22,5 +22,8 @@ test("Practice Test 6", async ({ page }) => {
     await page.goto("https://www.google.com/");
     console.log(await page.title());
     await expect(page).toHaveTitle("Google")
+    await page.goto("https://www.google.com/");
+    await page.locator("#APjFqb").pressSequentially("Playwright",{delay:1000});
+    await page.locator("#APjFqb").press("Backspace");
     console.log("Ending Practice Test 6");
 })
