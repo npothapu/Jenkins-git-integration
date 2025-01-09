@@ -7,14 +7,16 @@ test("Practice Test 3", async ({ page }) => {
     console.log(await page.title());
     await expect(page).toHaveTitle("Google")
     console.log("Ending Practice Google 3");
+    await page.close();
 })
 
 test("Practice Test 4", async ({ page }) => {
     console.log("Starting Practice Google 4");
     await page.goto("https://www.google.com/");
     console.log(await page.title());
-    await expect(page).toHaveTitle("GoogleWrongs")
+    await expect(page).toHaveTitle("Google")
     console.log("Ending Practice Test Google 4");
+    await page.close();
 })
 
 test("Practice Test 5", async ({ page }) => {
@@ -26,4 +28,5 @@ test("Practice Test 5", async ({ page }) => {
     await page.locator("#APjFqb").pressSequentially("Playwright",{delay:1000});
     await page.locator("#APjFqb").press("Backspace");
     console.log("Ending Practice Test Google 5");
+    await page.close();
 })
