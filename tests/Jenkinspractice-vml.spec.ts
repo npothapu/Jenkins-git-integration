@@ -8,6 +8,7 @@ test('has title', async ({ page }) => {
   await page.getByRole('link', { name: 'Work', exact: true }).click();
   await expect(page.locator('h1')).toContainText('Our Work');
 console.log("test 1 vml good");
+await page.close();
 });
 
 test('get started link', async ({ page }) => {
@@ -16,4 +17,5 @@ test('get started link', async ({ page }) => {
   await page.getByLabel('Main').getByLabel('Contact Us').click();
   await expect(page.getByRole('heading', { name: 'Contact Us' })).toBeVisible();
   console.log("test 2 vml good");
+  await page.close();
 });
