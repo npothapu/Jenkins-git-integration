@@ -10,17 +10,8 @@ test("Practice Test 3", async ({ page }) => {
     await page.close();
 })
 
-test("Practice Test 4", async ({ page }) => {
-    console.log("Starting Practice Google 4");
-    await page.goto("https://www.google.com/");
-    console.log(await page.title());
-    await expect(page).toHaveTitle("Google")
-    console.log("Ending Practice Test Google 4");
-    await page.close();
-})
-
 test("Practice Test 5", async ({ page }) => {
-    console.log("Starting Practice Test Google 5");
+    console.log("Starting Practice Test Google 55");
     await page.goto("https://www.google.com/");
     console.log(await page.title());
     await expect(page).toHaveTitle("Google")
